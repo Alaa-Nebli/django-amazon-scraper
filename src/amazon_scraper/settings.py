@@ -133,8 +133,7 @@ CELERY_RESULT_BACKEND = "django-db"
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 
 # This configures Redis as the datastore between Django + Celery
-#CELERY_BROKER_URL = config("REDIS_URL", default="redis://localhost:6379")
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+CELERY_BROKER_URL = config("REDIS_URL", default="redis://127.0.0.1:6379/0")
 
 
 # this allows you to schedule items in the Django admin.
