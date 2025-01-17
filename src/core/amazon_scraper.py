@@ -10,7 +10,6 @@ COLOR_RED = config("COLOR_RED")
 COLOR_GREEN = config("COLOR_GREEN")
 COLOR_RESET = config("COLOR_RESET")
 
-
 class AmazonScraper:
     def __init__(self, base_url):
         self.base_url = base_url
@@ -124,7 +123,6 @@ class AmazonScraper:
 
         print(f"{COLOR_GREEN}Scraping completed!{COLOR_RESET}")
         return self.products_data
-
 
 if __name__ == "__main__":
     url = "https://www.amazon.com/s?k=home"
