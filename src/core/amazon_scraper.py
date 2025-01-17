@@ -109,6 +109,7 @@ class AmazonScraper:
         html = Scraper(self.base_url).scrape()
         product_links = self.extract_products_list(html)
 
+        product_links = product_links[:5]  # Limit to first 5 products for testing
         with ThreadPoolExecutor(max_workers=5) as executor:
             future_to_url = {executor.submit(self.extract_product_details, url): url for url in product_links}
 
